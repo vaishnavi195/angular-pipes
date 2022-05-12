@@ -1,4 +1,28 @@
 <hello name="{{ name }}"></hello>
-<p>
-  Start editing to see some magic happen :)
-</p>
+<p>Start editing to see some magic happen :)</p>
+{{ day | date: 'dd-MMM-yy' }}+5<br />
+{{ number | number: '2.2-2' }}<br />
+{{ number | percent: '2.2-2' }}<br />
+{{ number | currency: 'INR' }}<br />
+{{ 'Vaishnavi' | uppercase }}
+{{ 'Gowtham' | lowercase }}<br />
+{{ 'vaishnavi ravichandran gowtham' | titlecase }}
+<br />
+{{ obj | json | uppercase }}<br />
+{{ obj | keyvalue | json }}<br />
+{{ arr | slice: 3 }}<br />
+{{ 'vaishnavi' | custom: 'W' }}
+<br />
+<input [(ngModel)]="value" />
+<button (click)="adduser(value)">add</button>
+<table>
+  <tr *ngFor="let user of users">
+    {{
+      user.name
+    }}
+  </tr>
+</table>
+<br />
+<div>{{ jsondata | async | json }}</div>
+<br/>
+<div>{{date$|async}}</div>
